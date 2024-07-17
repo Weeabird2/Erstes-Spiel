@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://bshjkyx64krld" path="res://Character/walk.png" id="3_qirmm"]
 [ext_resource type="Script" path="res://Scripts/hitbox.gd" id="4_8voi3"]
 [ext_resource type="Texture2D" uid="uid://cdqqd3l31qphc" path="res://Character/player_sword_base.png" id="4_e7abu"]
-[ext_resource type="Script" path="res://Szene/gcd.gd" id="5_uyb1q"]
 [ext_resource type="Texture2D" uid="uid://bqmkndbs31wx2" path="res://Character/player_sword_atk.png" id="6_wbla8"]
 [ext_resource type="Script" path="res://Scripts/counter.gd" id="9_gmf8o"]
 
@@ -752,6 +751,22 @@ size = Vector2(8, 21)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_a1lww"]
 
+[sub_resource type="GDScript" id="GDScript_yt0ix"]
+script/source = "extends Timer
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	#if timeout:
+		#get_parent().get_parent().can_attack = true
+	pass
+"
+
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_7mr1b")
 
@@ -782,7 +797,7 @@ script = ExtResource("4_8voi3")
 [node name="gcd" type="Timer" parent="hitbox"]
 wait_time = 0.3
 one_shot = true
-script = ExtResource("5_uyb1q")
+script = SubResource("GDScript_yt0ix")
 
 [node name="dash" type="Timer" parent="."]
 wait_time = 0.2

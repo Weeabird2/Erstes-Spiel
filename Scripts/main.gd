@@ -15,3 +15,7 @@ func _on_button_pressed():
 	get_tree().change_scene_to_file("res://Szene/level1.tscn")
 	
 
+
+
+func _on_animated_sprite_2d_animation_finished():
+	$AnimatedSprite2D.set_frame_and_progress(10,10)

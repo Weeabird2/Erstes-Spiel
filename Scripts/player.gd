@@ -19,7 +19,6 @@ signal on_hit
 func _process(delta):	
 	var maus = get_local_mouse_position()
 	var richtung = maus / maus.length()
-	var dash_distanz
 	
 		# input
 	direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

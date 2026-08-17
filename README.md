@@ -10,4 +10,4 @@ Befindet sich im Hauptmenü
 
 ---------------------------------------------------------------------------
 
-Hierbei handelt es sich lediglich um eine Proof of Concept demo und kein vollwärtiges Spiel.
+Hierbei handelt es sich lediglich um eine Proof of Concept Demo und kein vollwärtiges Spiel.
